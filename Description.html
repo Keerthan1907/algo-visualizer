@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Description - Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .description-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .description-content h2 {
+            margin-top: 0;
+        }
+        .logo {
+            position: absolute;
+            top: 7.5px;
+            left: 15px;
+            height: 75px; /* Adjust height as needed */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 5px 0; /* Reduced padding */
+            font-size: 14px; /* Reduced font size */
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logon.png" alt="College Logo" class="logo">
+        <h1>Analysis of Recursive Algorithms using Substitution Method</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="visualization.html">Visualization</a></li>
+                <li><a href="description.html">Description</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Understanding Recursive Algorithms and the Substitution Method</h2>
+        <div class="description-content">
+            <h3>What Are Recursive Algorithms?</h3>
+            <p>Recursive algorithms are a fundamental concept in computer science where a problem is solved by breaking it down into smaller, more manageable subproblems of the same type. These algorithms call themselves with modified inputs, eventually reaching a base case that stops the recursion. The power of recursion lies in its ability to simplify complex problems, making them easier to solve and understand.</p>
+
+            <h3>Where Are Recursive Algorithms Used?</h3>
+            <p>Recursive algorithms are widely used in various domains, including:</p>
+            <ul>
+                <li><strong>Sorting and Searching:</strong> Algorithms like quicksort, mergesort, and binary search leverage recursion to efficiently process data.</li>
+                <li><strong>Dynamic Programming:</strong> Recursive solutions with memoization are common in dynamic programming, optimizing problems like the Fibonacci sequence or knapsack problem.</li>
+                <li><strong>Graph and Tree Traversals:</strong> Recursion is the backbone of depth-first search (DFS) and breadth-first search (BFS) in trees and graphs.</li>
+                <li><strong>Mathematical Computations:</strong> Recursion simplifies the computation of factorials, greatest common divisors (GCD), and more.</li>
+                <li><strong>Backtracking Algorithms:</strong> Recursive backtracking is essential in solving puzzles, generating permutations, and finding solutions to constraint satisfaction problems.</li>
+            </ul>
+
+            <h3>What Is the Substitution Method?</h3>
+            <p>The substitution method is a powerful technique used to analyze the time complexity of recursive algorithms. It involves:</p>
+            <ol>
+                <li><strong>Assumption:</strong> Making an educated guess about the solution to the recurrence relation that describes the algorithm’s time complexity.</li>
+                <li><strong>Substitution:</strong> Plugging this assumption back into the recurrence to verify if it holds true.</li>
+                <li><strong>Inductive Proof:</strong> Using mathematical induction to rigorously prove the correctness of the assumed solution.</li>
+            </ol>
+            <p>This method is particularly useful when solving divide-and-conquer recurrences, where a problem is divided into smaller subproblems of a similar nature.</p>
+
+            <h3>Why the Substitution Method?</h3>
+            <p>The substitution method stands out because:</p>
+            <ul>
+                <li><strong>Versatility:</strong> Unlike the Master Theorem, the substitution method isn’t limited to specific forms of recurrences, making it more adaptable to a wider range of problems.</li>
+                <li><strong>Deep Understanding:</strong> It forces you to thoroughly understand the structure of the recurrence and the algorithm, promoting a deeper grasp of the underlying principles.</li>
+                <li><strong>Mathematical Rigor:</strong> By proving the assumed solution using induction, you ensure that the solution is not just a guess but a mathematically sound result.</li>
+            </ul>
+
+            <h3>Additional Insights</h3>
+            <p><strong>Practical Applications:</strong> The substitution method is particularly valuable in algorithm design and analysis, especially when dealing with divide-and-conquer algorithms where you need to understand the behavior of the solution as the problem size grows.</p>
+            <p><strong>Limitations:</strong> While versatile, the substitution method can be more time-consuming and complex compared to the Master Theorem, especially for beginners. However, mastering it pays off in terms of problem-solving skills and algorithmic insight.</p>
+
+            <h3>Conclusion</h3>
+            <p>Understanding and mastering the substitution method is crucial for anyone working with recursive algorithms. It’s a versatile and rigorous approach that provides deep insights into the time complexity of algorithms, ensuring you can tackle even the most challenging recurrences with confidence. Whether you’re a student, developer, or researcher, this method will be a valuable tool in your algorithmic toolkit.</p><br>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Algorithm Visualizer</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 60px; /* Add margin to ensure footer doesn't overlap content */
+        }
+        .quiz-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .quiz-question {
+            margin-bottom: 20px;
+        }
+        .quiz-question p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .quiz-question input[type="radio"] {
+            margin-right: 10px;
+        }
+        .quiz-question label {
+            margin-right: 20px;
+        }
+        .logo {
+            position: absolute;
+            top: 7.5px;
+            left: 15px;
+            height: 75px; /* Adjust height as needed */
+        }
+        .result {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: left;
+        }
+        .result p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 5px 0; /* Reduced padding */
+            font-size: 14px; /* Reduced font size */
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logon.png" alt="College Logo" class="logo">
+        <h1>Analysis of Recursive Algorithms using Substitution Method</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="visualization.html">Visualization</a></li>
+                <li><a href="description.html">Description</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Quiz</h2>
+        <div class="quiz-container">
+            <form id="quizForm">
+                <div class="quiz-question">
+                    <p>Question 1: What is the time complexity of binary search?</p>
+                    <input type="radio" id="q1a" name="q1" value="O(1)">
+                    <label for="q1a">O(1)</label>
+                    <input type="radio" id="q1b" name="q1" value="O(log n)">
+                    <label for="q1b">O(log n)</label>
+                    <input type="radio" id="q1c" name="q1" value="O(n)">
+                    <label for="q1c">O(n)</label>
+                    <input type="radio" id="q1d" name="q1" value="O(n^2)">
+                    <label for="q1d">O(n^2)</label>
+                </div>
+                <div class="quiz-question">
+                    <p>Question 2: Which of the following equations is correct for merge sort?</p>
+                    <input type="radio" id="q2a" name="q2" value="T(n)=2T(n/2)+n">
+                    <label for="q2a">T(n)=2T(n/2)+n</label>
+                    <input type="radio" id="q2b" name="q2" value="T(n)=T(n/2)+n^2">
+                    <label for="q2b">T(n)=T(n/2)+n^2</label>
+                    <input type="radio" id="q2c" name="q2" value="T(n)=4T(n/2)+n">
+                    <label for="q2c">T(n)=4T(n/2)+n</label>
+                    <input type="radio" id="q2d" name="q2" value="T(n)=T(n/2)+n log n">
+                    <label for="q2d">T(n)=T(n/2)+n log n</label>
+                </div>
+                <div class="quiz-question">
+                    <p>Question 3: Given the recurrence relation T(n) = 3T(n/4) + n, which of the following is the correct time complexity using the substitution method?</p>
+                    <input type="radio" id="q3a" name="q3" value="O(log n)">
+                    <label for="q3a">O(log n)</label>
+                    <input type="radio" id="q3b" name="q3" value="O(n^2)">
+                    <label for="q3b">O(n^2)</label>
+                    <input type="radio" id="q3c" name="q3" value="O(n)">
+                    <label for="q3c">O(n)</label>
+                    <input type="radio" id="q3d" name="q3" value="O(n log n)">
+                    <label for="q3d">O(n log n)</label>
+                </div>
+                <div class="quiz-question">
+                    <p>Question 4: Which of the 2 methods is more time consuming?</p>
+                    <input type="radio" id="q4a" name="q4" value="Master Theorem">
+                    <label for="q4a">Master Theorem</label>
+                    <input type="radio" id="q4b" name="q4" value="Substitution Method">
+                    <label for="q4b">Substitution Method</label>
+                    <input type="radio" id="q4c" name="q4" value="Both are equal">
+                    <label for="q4c">Both are equal</label>
+                    <input type="radio" id="q4d" name="q4" value="Can't be determined">
+                    <label for="q4d">Can't be determined</label>
+                </div>
+                <div class="quiz-question">
+                    <p>Question 5: What is the time complexity of Straussen's Multiplication?</p>
+                    <input type="radio" id="q5a" name="q5" value="O(n^2)">
+                    <label for="q5a">O(n^2)</label>
+                    <input type="radio" id="q5b" name="q5" value="O(n^2.81)">
+                    <label for="q5b">O(n^2.81)</label>
+                    <input type="radio" id="q5c" name="q5" value="O(n^2.5)">
+                    <label for="q5c">O(n^2.5)</label>
+                    <input type="radio" id="q5d" name="q5" value="O(n^3)">
+                    <label for="q5d">O(n^3)</label>
+                </div>
+                <button type="button" onclick="submitQuiz()">Submit</button>
+            </form>
+            <div id="result" class="result" style="display: none;">
+                <h3>Results</h3>
+                <div id="score"></div>
+                <div id="wrongQuestions"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Algorithm Visualizer</p>
+    </footer>
+    <script>
+        const correctAnswers = {
+            q1: 'O(log n)',
+            q2: 'T(n)=2T(n/2)+n',
+            q3: 'O(n log n)',
+            q4: 'Substitution Method',
+            q5: 'O(n^2.81)'
+        };
+
+        function submitQuiz() {
+            const form = document.getElementById('quizForm');
+            const result = document.getElementById('result');
+            const scoreElement = document.getElementById('score');
+            const wrongQuestionsElement = document.getElementById('wrongQuestions');
+            let score = 0;
+            let wrongQuestions = '';
+
+            for (let i = 1; i <= 5; i++) {
+                const selectedOption = form.querySelector(`input[name="q${i}"]:checked`);
+                if (selectedOption) {
+                    const answer = selectedOption.value;
+                    if (answer === correctAnswers[`q${i}`]) {
+                        score++;
+                    } else {
+                        wrongQuestions += `<p>Question ${i}: ${correctAnswers[`q${i}`]} (Your answer: ${answer})</p>`;
+                    }
+                } else {
+                    wrongQuestions += `<p>Question ${i}: No answer selected</p>`;
+                }
+            }
+
+            scoreElement.innerHTML = `<p>You scored ${score} out of 5.</p>`;
+            wrongQuestionsElement.innerHTML = `<h4>Wrong Answers:</h4>${wrongQuestions}`;
+
+            result.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
